@@ -43,4 +43,5 @@ public class SelenideContributorTest extends TestAllureSelenide {  //для Allu
     $x(".//*[@itemprop='name']").shouldHave(text("Andrei Solntsev")); //    УСПЕШНО
 
                }
+
 }
