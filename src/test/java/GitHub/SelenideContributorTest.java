@@ -25,6 +25,8 @@ public class SelenideContributorTest extends TestAllureSelenide {  //для Allu
 //                .screenshots(false)
 //                .savePageSource(true));  //для Allure - отчётов, но оно не работает
 
+        Configuration.pageLoadStrategy = "eager"; // страница не успевает прогрузиться и поэтому падает по таймауту  - лечится ТАК !!!
+
         Configuration.browserSize = "1920x1080";  // раскрыть экран на всю ))
 // 1 - открыть сайт: https://github.com/
       open("https://github.com/");
