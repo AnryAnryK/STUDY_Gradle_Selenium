@@ -128,6 +128,8 @@ public class Snippets {
         $("").shouldBe(checked); // проверка отмеченности элемента (в чек-боксе) (и unchecked)
 
         $("").shouldHave(text("Hello, Selenide!")); // проверка текста
+        //$("").shouldHave(byText(); // проверка текста
+        //$("").shouldHave(withText(// проверка части текста
         $("").shouldHave(exactText(("Hello, Selenide!"))); // проверка ТОЧНОГО текста
         $("").shouldHave(attribute("disabled")); // проверка отключенности элемента
         $("").shouldHave(attribute("enabled")); // проверка включенности элемента

@@ -1,4 +1,5 @@
 package GitHub;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.commands.SetValue;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,10 @@ public class SelenideRepositorySearchTest {
 
     @Test
           void shouldFindSelenideRepositoryAtTheTop(){
+        Configuration.pageLoadStrategy = "eager"; // страница не успевает прогрузиться и поэтому падает по таймауту  - лечится ТАК !!!
+        Configuration.browserSize = "1920x1080";  // раскрыть экран на всю ))
+
+
 // 1 - открыть сайт: https://github.com/
         open("https://github.com/");
 
