@@ -6,6 +6,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
@@ -20,7 +21,7 @@ public class SelenideContributorTest extends TestAllureSelenide {  //для Allu
     @Test
 @Owner("Андрей Калинченко")
     @Description ("Поиск на ГитХаб страницы создателя Селенида - Андрея Солнцева")
-      public   void  FindBestSelenideContributorTest(){
+    public   void  FindBestSelenideContributorTest(){
 //        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
 //                .screenshots(false)
 //                .savePageSource(true));  //для Allure - отчётов, но оно не работает
