@@ -27,6 +27,7 @@ dependencies {
     testImplementation("io.qameta.allure:allure-selenide:2.21.0")
     testImplementation("org.aspectj:aspectjweaver:1.9.5") // 6 - Аллюр Репорт
     testImplementation("org.slf4j:slf4j-simple:2.0.13") // Необязательное дополнение // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    testImplementation("org.assertj:assertj-core:3.26.3") // для загрузки файлов из интернета
 }
 
 tasks.test {
