@@ -28,6 +28,10 @@ dependencies {
     testImplementation("org.aspectj:aspectjweaver:1.9.5") // 6 - Аллюр Репорт
     testImplementation("org.slf4j:slf4j-simple:2.0.13") // Необязательное дополнение // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
     testImplementation("org.assertj:assertj-core:3.26.3") // для загрузки файлов из интернета
+
+    testImplementation("com.codeborne:pdf-test:1.9.0") // для работы/загрузки PDF-файлов
+    testImplementation("com.codeborne:xls-test:1.7.1") // для работы/загрузки XLS-файлов
+
 }
 
 tasks.test {
