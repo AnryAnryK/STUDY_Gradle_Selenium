@@ -29,8 +29,10 @@ dependencies {
     testImplementation("org.slf4j:slf4j-simple:2.0.13") // Необязательное дополнение // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
     testImplementation("org.assertj:assertj-core:3.26.3") // для загрузки файлов из интернета
 
-    testImplementation("com.codeborne:pdf-test:1.9.0") // для работы/загрузки PDF-файлов
-    testImplementation("com.codeborne:xls-test:1.7.1") // для работы/загрузки XLS-файлов
+    testImplementation("com.codeborne:pdf-test:1.5.0") // для работы/загрузки PDF-файлов - !!! com.codeborne:pdf-test:1.5.0 - не конфликтует с com.codeborne:xls-test:1.4.3 !!!
+    testImplementation("com.codeborne:xls-test:1.4.3") // для работы/загрузки XLS-файлов - !!! com.codeborne:xls-test:1.4.3 - не конфликтует с com.codeborne:pdf-test:1.5.0 !!!
+    testImplementation("com.opencsv:opencsv:5.9")  // для работы/загрузки CSV-файлов
+    testImplementation("com.google.code.gson:gson:2.11.0")  // для работы/загрузки json-файлов
 
 }
 
