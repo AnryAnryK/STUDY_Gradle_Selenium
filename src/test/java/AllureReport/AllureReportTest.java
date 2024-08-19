@@ -1,5 +1,6 @@
-package GitHub;
+package AllureReport;
 
+import GitHub.TestAllureSelenide;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.junit5.TextReportExtension;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -16,10 +17,10 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class SelenideContributorTest extends TestAllureSelenide {  //для Allure - отчётов, но о{
+public class AllureReportTest extends TestAllureSelenide {  //для Allure - отчётов, но о{
 
     @Test
-@Owner("Андрей Калинченко")
+    @Owner("Андрей Калинченко")
     @Description ("Поиск на ГитХаб страницы создателя Селенида - Андрея Солнцева")
     public   void  FindBestSelenideContributorTest(){
         SelenideLogger.addListener("allure", new AllureSelenide()); // !! всё итак хорошо работало и без этой строчки !! - её в 15 Уроке сказал ставить Артём Ерошенко (создатель Аллюра)
@@ -32,7 +33,7 @@ public class SelenideContributorTest extends TestAllureSelenide {  //для Allu
 
         Configuration.browserSize = "1920x1080";  // раскрыть экран на всю ))
 // 1 - открыть сайт: https://github.com/
-      open("https://github.com/");
+        open("https://github.com/");
 
 // 2 - в поисковой строке ввести слово: Selenide
         $(By.xpath("//*[@data-target='qbsearch-input.inputButtonText']")).click();
@@ -42,11 +43,11 @@ public class SelenideContributorTest extends TestAllureSelenide {  //для Allu
         $x(".//span[@class='Text-sc-17v1xeu-0 qaOIC search-match' and contains(text(),'selenide/')]").click();
 
 // 4 - найти в заголовке Contributors страницу Андрея Солнцева (первого в списке)
-            $x(".//*[@src='https://avatars.githubusercontent.com/u/279773?s=64&v=4']").click();
+        $x(".//*[@src='https://avatars.githubusercontent.com/u/279773?s=64&v=4']").click();
 
 // 5 - выйти на страницу Андрея Солнцева
-    $x(".//*[@itemprop='name']").shouldHave(text("Andrei Solntsev")); //    УСПЕШНО
+        $x(".//*[@itemprop='name']").shouldHave(text("Andrei Solntsev")); //    УСПЕШНО
 
-               }
+    }
 
 }
