@@ -1,3 +1,5 @@
+
+
 plugins {
     id("java-library")
     id("io.qameta.allure") version "2.11.2"
@@ -26,7 +28,7 @@ dependencies {
     testImplementation("com.microsoft.playwright:playwright:1.45.1")
 
     testImplementation("io.qameta.allure:allure-junit5:2.12.1") // 1 - Аллюр Репорт
-    testImplementation("io.qameta.allure:allure-commandLine:2.12.1") // 2 - Аллюр Репорт
+    testImplementation("io.qameta.allure:allure-commandline:2.30.0") // 2 - Аллюр Репорт
     testImplementation("io.qameta.allure:allure-assertj:2.12.1") // 3 - Аллюр Репорт
     testImplementation("io.qameta.allure:allure-rest-assured:2.12.1") // 4 - Аллюр Репорт
     testImplementation("io.qameta.allure:allure-java-commons:2.12.1") // 5 - Аллюр Репорт
@@ -50,3 +52,6 @@ tasks.test {
     useJUnitPlatform{}
 
 }
+
+
+
