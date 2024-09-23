@@ -2,7 +2,10 @@
 
 plugins {
     id("java-library")
-    id("io.qameta.allure") version "2.11.2"
+    id("io.qameta.allure") version "2.11.2" // для allure
+//    id("io.freefair.lombok") version "6.0.0-m2" // для lombok
+//    id ("org.springframework.boot") version "2.5.3" // для spring
+//    id ("io.spring.dependency-management") version "1.0.11.RELEASE" // для spring
 }
 
 //group = "org.example"
@@ -46,6 +49,17 @@ dependencies {
 
     testImplementation("com.github.javafaker:javafaker:0.12")  // для урока - 14_Генерация тестовых данных
 
+    testImplementation("io.rest-assured:rest-assured:5.3.0") //для  rest-assured (уроки по REST API)
+    testImplementation("rg.assertj:assertj-core:assertJVersion") //в оригинале в "rest-api-16" было так testImplementation("org.assertj:assertj-core:$assertJVersion")  //
+    testImplementation("com.fasterxml.jackson.core:jackson-databind:2.14.1")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test") // для spring
+    testImplementation("org.springframework.boot:spring-boot-starter-web") // для spring
+    testImplementation("io.springfox:springfox-boot-starter:3.0.0") // для spring и для swagger
+//    implementation(kotlin("script-runtime"))
+
+//    testImplementation ("org.postgresql:postgresql:42.3.5")  // у Бонусному уроку по JAVA (для Docker)
+//    testImplementation("org.springframework:spring-jdbc:5.3.20") // у Бонусному уроку по JAVA (для Docker)
 }
 
 tasks.test {

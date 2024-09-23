@@ -39,7 +39,7 @@ public class SelenideContributorTest extends TestAllureSelenide {  //для Allu
         $x(".//*[@style='width: 300px;']").setValue("Selenide").pressEnter();
 
 // 3 - кликнуть на первую строку/первый репозиторий из списка найденных
-        $x(".//span[@class='Text-sc-17v1xeu-0 qaOIC search-match' and contains(text(),'selenide/')]").click();
+        $x(".//span[@class='Text__StyledText-sc-17v1xeu-0 fsOMbO search-match' and contains(text(),'selenide/')]").click();
 
 // 4 - найти в заголовке Contributors страницу Андрея Солнцева (первого в списке)
             $x(".//*[@src='https://avatars.githubusercontent.com/u/279773?s=64&v=4']").click();
