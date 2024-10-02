@@ -22,7 +22,7 @@ dependencies {
     //testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("com.codeborne:selenide:7.3.1") // selenide
 
-    testImplementation("io.github.bonigarcia:webdrivermanager:5.9.2") // позволяет специально не искать Веб-драйвер ХРОМА
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.9.2") // позволяет специально не искать Веб-драйвер ХРОМА и в @Test после void написать: WebDriverManager.chromedriver.setup()
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.3") // 1 - JUnit5
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.3") // 2 - JUnit5

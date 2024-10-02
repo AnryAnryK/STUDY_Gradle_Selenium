@@ -13,6 +13,7 @@ public class TestAllureSelenide {
     Configuration.browser = "chrome";
     Configuration.browserSize = "1920x1080";
     SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
 }
 }
 
