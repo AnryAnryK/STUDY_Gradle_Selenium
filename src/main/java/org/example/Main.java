@@ -1,10 +1,23 @@
 package org.example;
 
+import jdk.jfr.FlightRecorder;
+import org.example.Study1.Customer;
+import org.example.Study1.FlightBookingService;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 public static void main(String[] args) {
+
+	Customer customer1 = new Customer("Анри ", "Анриевич");
+	Customer customer2 = new Customer("Петро ", "Петрович");
+
+	FlightBookingService flightBookingService = new FlightBookingService();
+	flightBookingService.bookingFlight(1, customer1);
+	flightBookingService.bookingFlight(2, customer2);
+	flightBookingService.cancelBooking(2);
+	flightBookingService.TotalBookingCount();
 
 //    Массивы
 

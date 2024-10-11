@@ -23,10 +23,10 @@ dependencies {
     testImplementation("com.codeborne:selenide:7.3.1") // selenide
 
     testImplementation("io.github.bonigarcia:webdrivermanager:5.9.2") // позволяет специально не искать Веб-драйвер ХРОМА и в @Test после void написать: WebDriverManager.chromedriver.setup()
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.3") // 1 - JUnit5
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.3") // 1 -!!!  JUnit5  - !!! это АГРЕГАТОР (он включает в себя 1-ю и 2-ю минимально необходимые зависимости, т.е. можно ТОЛЬКО ЕГО ИСПОЛЬЗОВАТЬ !!!)
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.3") // 2 - JUnit5
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.3") // 3 - JUnit5  но этот под вопросом (в репозитории такого нет - я взял из Урока по JUNIT5)
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.3") // 2 - JUnit5 - это его "ядро", т.е. "основная зависимость" (1-я из 2 минимально необходимых зависимостей, чтобы JUnit5 заработал)
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.3") // 3 - JUnit5 - (2-я из 2 минимально необходимых зависимостей, чтобы JUnit5 заработал)  но этот под вопросом (в репозитории такого нет - я взял из Урока по JUNIT5)     -junit-jupiter-engine - это код, который отвечает за запуск тестов, отвечает за интеграцию этого запуска с системами, которые умеют запускать тесты (Gradle, Maven, IntelijIdea - "зелёная кнопочка")
 
     testImplementation("com.microsoft.playwright:playwright:1.45.1")
 
